@@ -1,0 +1,40 @@
+.listItem {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 30px 30px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    color: #26374d;
+
+    &:hover {
+        background-color: #aedffc;
+    }
+
+    .content {
+        justify-self: start;
+        padding-left: 20px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+    }
+
+    .edit,
+    .delete {
+        visibility: hidden;
+        height: 17px;
+        width: 17px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &:hover {
+
+        .edit,
+        .delete {
+            visibility: visible;
+        }
+    }
+}

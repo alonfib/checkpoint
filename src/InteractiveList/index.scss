@@ -1,0 +1,97 @@
+.interactiveList {
+    width: 600px;
+    height: 300px;
+    border: 1px solid #d1d1d1;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        height: 35px;
+        line-height: 35px;
+        text-align: start;
+        width: 100%;
+        background-color: #26374d;
+        color: white;
+        font-weight: bold;
+
+        .text {
+            padding-left: 20px;
+        }
+    }
+
+    .inputWrapper {
+        display: flex;
+        outline: none;
+        border-bottom: 1px solid #d1d1d1;
+
+        button {
+            width: 35px;
+            color: #26374d;
+            font-size: 30px;
+            cursor: pointer;
+
+            &:active {
+                background-color: #d1d1d1;
+            }
+        }
+
+        button,
+        input {
+            height: 35px;
+            border: none;
+        }
+
+        button:focus,
+        input:focus {
+            outline: none;
+        }
+
+        input::placeholder {
+            font-style: italic;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        input {
+            padding: 0;
+            width: 100%;
+            padding-left: 15px;
+        }
+
+        &[data-iserror=true] {
+            border: 1px solid red;
+
+            .errorSign {
+                color: white;
+                background: red;
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    .content {
+        height: 100%;
+        overflow-y: auto;
+        margin-top: 1px;
+
+
+        .noContent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-style: italic;
+            color: #afb1b3;
+        }
+    }
+}
